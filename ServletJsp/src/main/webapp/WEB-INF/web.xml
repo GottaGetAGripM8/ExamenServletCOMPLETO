@@ -42,14 +42,14 @@
     
      <!--TERCER SERVLET -->
     <servlet>
-        <servlet-name>HelloServletB</servlet-name>
-        <servlet-class>servletpackage.ServletBorrar</servlet-class>
+        <servlet-name>HelloServletBA</servlet-name>
+        <servlet-class>servletpackage.ServletBorrarAutenticacion</servlet-class>
     </servlet>
 
     <!--TERCER SERVLET -->
     <servlet-mapping>
-        <servlet-name>HelloServletB</servlet-name>
-        <url-pattern>/Hola</url-pattern>
+        <servlet-name>HelloServletBA</servlet-name>
+        <url-pattern>/HolaBA</url-pattern>
     </servlet-mapping>
     
     <!--CUARTO SERVLET -->
@@ -63,6 +63,28 @@
         <servlet-name>HelloServletIdiomaEnDatos</servlet-name>
         <url-pattern>/lol</url-pattern>
     </servlet-mapping>
+    
+    <!--QUINTO SERVLET -->
+    <servlet>
+        <servlet-name>HelloServletB</servlet-name>
+        <servlet-class>servletpackage.ServletBorrar</servlet-class>
+    </servlet>
+
+    <!--QUINTO SERVLET -->
+    <servlet-mapping>
+        <servlet-name>HelloServletB</servlet-name>
+        <url-pattern>/Hola</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <welcome-file-list>
     	<welcome-file>datos.jsp</welcome-file>
 	</welcome-file-list>
