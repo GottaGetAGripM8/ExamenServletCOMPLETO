@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ page import="java.io.*,java.util.*,servletpackage.*" %>
+<%@ page import="java.io.*,java.util.*,h2package.*, utilpackage.*" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -43,13 +43,17 @@
 						<td>			
 							<select id="idiomaDis" name="idiomaDis"> 
 								<option> Selecciona un idioma </option>
-								
-									<c:forEach var="user1" items="${listAllUsers}">
-												
-												<option> <c:out value="${user1.nomIdioma}"/> </option>
-													
-									</c:forEach>
-	
+									
+									<%
+									
+										List <Idioma> listLanguageOptions = SelectFromTable.SelectTableIdiomas();
+										for (int i=0;i<listLanguageOptions.size();i++){
+										   out.println("<option value ='"+listLanguageOptions.get(i).getnomIdioma()+"'>"+listLanguageOptions.get(i).getnomIdioma()+"</option>");
+										}
+									
+									
+									%>
+									
 							</select>
 						</td>
 					</tr>
@@ -63,17 +67,6 @@
 		</div>
 		
 		</form>
-		
-		<form method="post" action="lol">	
-			
-			<center>
-				
-				<input type="submit"  value="Cargar Idiomas de la DB">
-				
-			
-			</center>
-		
-		</form>	
 		
 		<div align="center">
 			<h3><a href="tablaUsers.jsp"> LISTADO DE IDIOMAS </a></h3>

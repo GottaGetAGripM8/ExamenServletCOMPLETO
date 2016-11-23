@@ -19,7 +19,7 @@ public class ServletTableIdioma extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		listAllUsers = SelectFromTable.SelectTableAlumnos();
+		listAllUsers = SelectFromTable.SelectTableIdiomas();
 		req.setAttribute("listAllUsers", listAllUsers);
 		redirect(req,resp);
 		
