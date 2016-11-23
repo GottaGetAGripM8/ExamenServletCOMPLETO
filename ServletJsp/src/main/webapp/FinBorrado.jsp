@@ -8,11 +8,22 @@
 </head> 
 <body>
 		<div align="center">
-			<h2>Se han borrado los datos de la DB</h2><br>
+			<h2>Seguro que quiere borrar ${country} de la BD ? </h2><br>
 				
 			
 			<div align="center">
-				<a href="datos.jsp"><input type="button" value="Volver al formulario"></a>		
+				<a href="datos.jsp"><input type="button" value="No"></a>	
+				
+				<form action="Hola" method="post"> 
+			        <div align="center"> 
+			 
+						<input type="hidden" value="${country}" name="nomB" id="nomB">
+						<input type="submit" value="Si">
+			
+					</div>
+	 	</form>
+				
+					
 			</div>
 			
 			<br>

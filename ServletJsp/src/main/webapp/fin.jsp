@@ -40,10 +40,10 @@
 		
 		<br>
 		
-		<form action="Hola" method="post"> 
+		<form action="HolaBA" method="post"> 
 	        <div align="center"> 
 	 
-				<input type="hidden" value="${country}" name=nomB id=nomB>
+				<input type="hidden" value="${country}" name="nomB" id="nomB">
 				<input type="submit" value="Borrar datos">
 	
 			</div>
