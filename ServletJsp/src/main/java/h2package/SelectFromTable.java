@@ -12,8 +12,8 @@ import utilpackage.Idioma;
 public class SelectFromTable {
 	
 	private static H2Query h2query = new H2Query();
-	private static List<Idioma> listUsers= new ArrayList<Idioma>();
-	public static List SelectTableAlumnos() {
+	private static List<Idioma> listLanguages= new ArrayList<Idioma>();
+	public static List SelectTableIdiomas() {
 		try {
 			String sql = "SELECT * FROM Idiomas";
 		
@@ -31,7 +31,7 @@ public class SelectFromTable {
 				
 				idiomaInDatabase.setnomPais(rs.getString(2)); //nomPais
 				
-				listUsers.add(idiomaInDatabase);
+				listLanguages.add(idiomaInDatabase);
 			}
 			
 			} catch (SQLException se) {
@@ -48,7 +48,7 @@ public class SelectFromTable {
 	            } catch (SQLException se) {
 	                se.printStackTrace();
 	            }
-	            return listUsers;
+	            return listLanguages;
 			}
 	}
 
