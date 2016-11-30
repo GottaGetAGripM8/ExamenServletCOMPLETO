@@ -20,7 +20,7 @@
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/formulario</url-pattern>
-        <!--
+        <!-- 
 	
 		IMPORTANTE:
 		El <url-pattern> </url-pattern> debe coincidir con <form action="formulario" method="post"> de datos.jsp
