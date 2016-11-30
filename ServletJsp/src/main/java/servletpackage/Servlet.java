@@ -38,7 +38,7 @@ public class Servlet extends HttpServlet{
 		InsertIntoTable.insertTablePaises(nomPais); 
 		InsertIntoTable.insertTableIdiomas(nuevoIdioma, nomPais);//Inserta Idioma, sino, lo actualiza
 		
-		req.getRequestDispatcher("fin.jsp").forward(req, resp);
+		req.getRequestDispatcher("End.jsp").forward(req, resp);
 		  
 		super.doPost(req, resp);
 		
@@ -52,7 +52,7 @@ public class Servlet extends HttpServlet{
 	}
 	 
 	private void redirect(HttpServletResponse resp) throws IOException, ServletException {
-		resp.sendRedirect("fin.jsp");
+		resp.sendRedirect("End.jsp");
 	}
 	
 }

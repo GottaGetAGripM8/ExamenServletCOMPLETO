@@ -25,7 +25,7 @@ public class ServletBorrarAutenticacion extends HttpServlet{
 		
 		req.setAttribute("country", pBorrar);
 		
-		req.getRequestDispatcher("FinBorrado.jsp").forward(req, resp);
+		req.getRequestDispatcher("EndDelete.jsp").forward(req, resp);
 		
 		super.doPost(req, resp);
 		
@@ -50,7 +50,7 @@ public class ServletBorrarAutenticacion extends HttpServlet{
 	}
 
 	private void redirect(HttpServletResponse resp) throws IOException, ServletException {
-		resp.sendRedirect("FinBorrado.jsp");
+		resp.sendRedirect("EndDelete.jsp");
 	}
 	
 }

@@ -12,7 +12,7 @@
 				
 			
 			<div align="center">
-				<a href="datos.jsp"><input type="button" value="No"></a>	
+				<a href="Index.jsp"><input type="button" value="No"></a>	
 				
 				<form action="Hola" method="post"> 
 			        <div align="center"> 

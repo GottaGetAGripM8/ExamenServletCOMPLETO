@@ -64,7 +64,7 @@
 				
 				<input type="submit"  value="Mostrar">
 				
-				<a href="datos.jsp"><input type="button" value="Volver al formulario"></a>
+				<a href="Index.jsp"><input type="button" value="Volver al formulario"></a>
 			
 			</center>
 		

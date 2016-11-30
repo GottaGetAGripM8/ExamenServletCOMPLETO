@@ -12,7 +12,7 @@
 				
 			
 			<div align="center">
-				<a href="datos.jsp"><input type="button" value="Volver al formulario"></a>		
+				<a href="Index.jsp"><input type="button" value="Volver al formulario"></a>		
 			</div>
 			
 			<br>

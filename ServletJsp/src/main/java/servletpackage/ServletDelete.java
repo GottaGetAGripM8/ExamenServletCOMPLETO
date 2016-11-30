@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import h2package.DeleteFromTable;
 
 
-public class ServletBorrar extends HttpServlet{
+public class ServletDelete extends HttpServlet{
 	
 	private String nom;
 	

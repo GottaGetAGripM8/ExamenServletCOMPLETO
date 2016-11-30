@@ -27,7 +27,7 @@ public class ServletTableIdioma extends HttpServlet {
 	}
 
 	private void redirect(HttpServletRequest req,HttpServletResponse resp) throws IOException, ServletException {
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/tablaUsers.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/TableUsers.jsp");
 		dispatcher.forward(req,resp);
 		
 	}

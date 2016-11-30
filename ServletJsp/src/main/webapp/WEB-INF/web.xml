@@ -65,7 +65,7 @@
     </servlet-mapping>
     
     <welcome-file-list>
-    	<welcome-file>datos.jsp</welcome-file>
+    	<welcome-file>Index.jsp</welcome-file>
 	</welcome-file-list>
 
 </web-app>     

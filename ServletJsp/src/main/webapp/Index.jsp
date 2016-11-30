@@ -69,7 +69,7 @@
 		</form>
 		
 		<div align="center">
-			<h3><a href="tablaUsers.jsp"> LISTADO DE IDIOMAS </a></h3>
+			<h3><a href="TableUsers.jsp"> LISTADO DE IDIOMAS </a></h3>
 		</div>
 		
 	
