@@ -13,7 +13,7 @@ import h2package.InsertIntoTable;
 
 
 
-public class Servlet extends HttpServlet{
+public class InitServlet extends HttpServlet{
 	
 	private String nomPais, idiomaDisponible, nuevoIdioma;
 		

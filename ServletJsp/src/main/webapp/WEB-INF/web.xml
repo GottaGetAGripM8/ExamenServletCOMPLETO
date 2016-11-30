@@ -9,11 +9,11 @@
         This is a simple web application with a source code organization
         based on the recommendations of the Application Developer's Guide.
     </description>
-	
+	 
 	<!-- ORIGINAL -->
     <servlet> 
         <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>servletpackage.Servlet</servlet-class>
+        <servlet-class>servletpackage.InitServlet</servlet-class>
     </servlet>
     
     <!-- ORIGINAL -->
@@ -31,7 +31,7 @@
     <!--SEGUNDO SERVLET -->
     <servlet>
         <servlet-name>HelloServletM</servlet-name>
-        <servlet-class>servletpackage.ServletTableIdioma</servlet-class>
+        <servlet-class>servletpackage.TableIdiomasServlet</servlet-class>
     </servlet>
 
     <!--SEGUNDO SERVLET -->
@@ -43,7 +43,7 @@
      <!--TERCER SERVLET -->
     <servlet>
         <servlet-name>HelloServletBA</servlet-name>
-        <servlet-class>servletpackage.ServletBorrarAutenticacion</servlet-class>
+        <servlet-class>servletpackage.DeleteAuthenticationServlet</servlet-class>
     </servlet>
 
     <!--TERCER SERVLET -->
@@ -55,7 +55,7 @@
     <!--CUARTO SERVLET -->
     <servlet>
         <servlet-name>HelloServletB</servlet-name>
-        <servlet-class>servletpackage.ServletBorrar</servlet-class>
+        <servlet-class>servletpackage.DeleteServlet</servlet-class>
     </servlet>
     
     <!--CUARTO SERVLET -->

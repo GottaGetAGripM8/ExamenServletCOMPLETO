@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import h2package.DeleteFromTable;
 
 
-public class ServletDelete extends HttpServlet{
+public class DeleteAuthenticationServlet extends HttpServlet{
 	
 	private String nom;
 	
@@ -20,16 +20,16 @@ public class ServletDelete extends HttpServlet{
 		
 		//req.setAttribute("nom", pBorrar);
 		
-		DeleteFromTable.deleteTableIdiomas(pBorrar);
-		DeleteFromTable.deleteTablePaises(pBorrar);
+		//DeleteFromTable.deleteTableIdiomas(pBorrar);
+		//DeleteFromTable.deleteTablePaises(pBorrar);
 		
-		//req.setAttribute("country", pBorrar);
+		req.setAttribute("country", pBorrar);
 		
-		redirect(resp);
+		req.getRequestDispatcher("EndDelete.jsp").forward(req, resp);
 		
 		super.doPost(req, resp);
 		
-		
+		redirect(resp);
 
 	} 
 	
@@ -43,14 +43,14 @@ public class ServletDelete extends HttpServlet{
 		DeleteFromTable.deleteTablePaises(user);
 		
 		redirect(resp);
-		 
+		
 		redirect(resp);
 		
 		super.doPost(req, resp);
 	}
 
 	private void redirect(HttpServletResponse resp) throws IOException, ServletException {
-		resp.sendRedirect("EndForm.jsp");
+		resp.sendRedirect("EndDelete.jsp");
 	}
 	
 }

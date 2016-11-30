@@ -14,7 +14,7 @@ import h2package.SelectFromTable;
 import utilpackage.Idioma;;
 
 
-public class ServletTableIdioma extends HttpServlet {
+public class TableIdiomasServlet extends HttpServlet {
 	List<Idioma> listAllUsers = new ArrayList<Idioma>();
 	
 	@Override
