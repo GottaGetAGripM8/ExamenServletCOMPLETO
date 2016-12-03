@@ -21,7 +21,7 @@ public class DeleteServlet extends HttpServlet{
 		DeleteFromTable.deleteTableIdiomas(countryToDelete);
 		DeleteFromTable.deleteTablePaises(countryToDelete);
 		
-		redirect(resp);
+		redirect(resp); 
 		
 		super.doPost(req, resp);
 
@@ -29,12 +29,12 @@ public class DeleteServlet extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String user = req.getParameter("user");
+		String countryToDelete = req.getParameter("country");
 				
-		req.setAttribute("nom", user);
+		req.setAttribute("country", countryToDelete);
 		
-		DeleteFromTable.deleteTableIdiomas(user);
-		DeleteFromTable.deleteTablePaises(user);
+		DeleteFromTable.deleteTableIdiomas(countryToDelete);
+		DeleteFromTable.deleteTablePaises(countryToDelete);
 		
 		redirect(resp);
 		 

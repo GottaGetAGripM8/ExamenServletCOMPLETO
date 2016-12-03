@@ -30,18 +30,7 @@ public class DeleteAuthenticationServlet extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String user = req.getParameter("user");
-				
-		req.setAttribute("nom", user);
-		
-		DeleteFromTable.deleteTableIdiomas(user);
-		DeleteFromTable.deleteTablePaises(user);
-		
-		redirect(resp);
-		
-		redirect(resp);
-		
-		super.doPost(req, resp);
+
 	}
 
 	private void redirect(HttpServletResponse resp) throws IOException, ServletException {

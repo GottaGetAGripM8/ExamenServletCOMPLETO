@@ -11,44 +11,64 @@
     </description>
 	 
     <servlet> 
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>servletpackage.InitServlet</servlet-class>
+        <servlet-name>initialForm</servlet-name>
+        <servlet-class>servlet.InitServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/formulario</url-pattern>
+        <servlet-name>initialForm</servlet-name>
+        <url-pattern>/firstForm</url-pattern>
     </servlet-mapping>
     
+    
+    
+    
+    
     <servlet>
-        <servlet-name>HelloServletM</servlet-name>
-        <servlet-class>servletpackage.TableIdiomasServlet</servlet-class>
+        <servlet-name>showDBTable</servlet-name>
+        <servlet-class>servlet.TableIdiomasServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>HelloServletM</servlet-name>
-        <url-pattern>/muestra</url-pattern>
+        <servlet-name>showDBTable</servlet-name>
+        <url-pattern>/showMeData</url-pattern>
     </servlet-mapping>
+        
+    
+    
+    
     
     <servlet>
-        <servlet-name>HelloServletBA</servlet-name>
-        <servlet-class>servletpackage.DeleteAuthenticationServlet</servlet-class>
+        <servlet-name>confirmDelete</servlet-name>
+        <servlet-class>servlet.DeleteAuthenticationServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>HelloServletBA</servlet-name>
-        <url-pattern>/HolaBA</url-pattern>
+        <servlet-name>confirmDelete</servlet-name>
+        <url-pattern>/reallyWant2Del</url-pattern>
     </servlet-mapping> 
+        
+    
+    
+    
     
     <servlet>
-        <servlet-name>HelloServletB</servlet-name>
-        <servlet-class>servletpackage.DeleteServlet</servlet-class>
+        <servlet-name>goDeleteIt</servlet-name>
+        <servlet-class>servlet.DeleteServlet</servlet-class>
     </servlet>
     
 	<servlet-mapping>
-        <servlet-name>HelloServletB</servlet-name>
-        <url-pattern>/Hola</url-pattern>
+        <servlet-name>goDeleteIt</servlet-name>
+        <url-pattern>/letMeDeleteIt</url-pattern>
     </servlet-mapping>
+        <!--
+        CAMBIAR LA VARIABLE DE NOMBRE AQUI Y EN 
+        SU SERVLET
+        
+        TABLE USER Hola?user=${country.nomPais} -->
+    
+    
+    
     
     <welcome-file-list>
     	<welcome-file>Index.jsp</welcome-file>

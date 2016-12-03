@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ page import="java.io.*,java.util.*,servletpackage.*" %>
+<%@ page import="java.io.*,java.util.*,h2.*, model.*, servlet.*" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     
@@ -48,7 +48,7 @@
 					<td align="center"><c:out value="${country.nomPais}"/> </td>
 					
 					
-					<td align="center"><a name="user" href="Hola?user=${country.nomPais}">ELIMINAR</a></td>
+					<td align="center"><a name="user" href="letMeDeleteIt?user=${country.nomPais}">ELIMINAR</a></td>
 					
 		    	</tr>
 		    	
@@ -58,7 +58,7 @@
 		
 	</table>
 		
-		<form method="post" action="muestra">	
+		<form method="post" action="showMeData">	
 			
 			<center>
 				

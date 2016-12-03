@@ -14,7 +14,7 @@
 			<div align="center">
 				<a href="Index.jsp"><input type="button" value="No"></a>	
 				
-				<form action="Hola" method="post"> 
+				<form action="letMeDeleteIt" method="post"> 
 			        <div align="center"> 
 			 
 						<input type="hidden" value="${country}" name="cToDelete" id="cToDelete">

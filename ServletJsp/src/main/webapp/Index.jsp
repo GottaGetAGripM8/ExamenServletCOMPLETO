@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ page import="java.io.*,java.util.*,h2package.*, utilpackage.*" %>
+<%@ page import="java.io.*,java.util.*,h2.*, model.*, servlet.*" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -12,15 +12,8 @@
 <title>Index</title>
 </head>
 <body>
-	<form action="formulario" method="post"> 
-	<!--
-	
-	IMPORTANTE:
-	El action debe coincidir con <url-pattern> </url-pattern> de web.xml
-	
-	-->
+	<form action="firstForm" method="post"> 
 
-	
 		<div align="center">
 		
 				<table width=350>
