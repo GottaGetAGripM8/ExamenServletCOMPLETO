@@ -24,9 +24,9 @@ public class InitServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		 
-		countryName = recoverData.fromPais(req, resp);
-		avaliableLanguage = recoverData.fromIdiomaDisponible(req, resp);
-		newLanguage = recoverData.fromNuevoIdioma(req, resp); 
+		countryName = recoverData.fromPais(req);
+		avaliableLanguage = recoverData.fromIdiomaDisponible(req);
+		newLanguage = recoverData.fromNuevoIdioma(req); 
 		
 		req.setAttribute("country", countryName);
 		req.setAttribute("language", avaliableLanguage);
