@@ -38,8 +38,9 @@
 								<option> Selecciona un idioma </option> 
 									
 									<%
+										SelectFromTable sft = new SelectFromTable();	
 									
-										List <Idioma> listLanguageOptions = SelectFromTable.SelectTableIdiomas();
+										List <Idioma> listLanguageOptions = sft.SelectTableIdiomas();
 										for (int i=0;i<listLanguageOptions.size();i++){
 										   out.println("<option value ='"+listLanguageOptions.get(i).getnomIdioma()+"'>"+listLanguageOptions.get(i).getnomIdioma()+"</option>");
 										}

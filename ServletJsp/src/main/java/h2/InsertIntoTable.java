@@ -8,7 +8,7 @@ public class InsertIntoTable {
 		
 	}
 	
-    public static void insertTablePaises(String nom) {
+    public void insertTablePaises(String nom) {
         
     	String sql = "REPLACE INTO Paises (nomPais) VALUES ('" + nom + "')";
     	
@@ -16,7 +16,7 @@ public class InsertIntoTable {
     	
     } 
     
-    public static void insertTableIdiomas(String idi, String nomp) {
+    public void insertTableIdiomas(String idi, String nomp) {
         
     	String sql = "REPLACE INTO Idiomas (nomIdioma, nomPais) VALUES ('" + idi + "', '" + nomp +"')";
     	

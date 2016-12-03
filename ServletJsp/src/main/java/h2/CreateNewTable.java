@@ -4,11 +4,11 @@ public class CreateNewTable {
 	
 	private static H2Query h2query = new H2Query();
 	
-	public static void main(String[] args) {
-		createTablePais();
-		createTableIdioma();
+	public void main(String[] args) {
+
 	}
-	public static void createTablePais() {
+	
+	public void createTablePais() {
 		
 		final String sqlCountry = "CREATE TABLE IF NOT EXISTS Paises " +
 					 " (nomPais VARCHAR(255), " +
@@ -20,7 +20,7 @@ public class CreateNewTable {
 		
 	}
 
-	public static void createTableIdioma() {
+	public void createTableIdioma() {
 		
 		final String sqlLang = "CREATE TABLE IF NOT EXISTS Idiomas " +
 				 " (nomIdioma VARCHAR(255), " +

@@ -15,11 +15,12 @@ import model.Idioma;;
 
 
 public class TableIdiomasServlet extends HttpServlet {
-	List<Idioma> listAllCountries = new ArrayList<Idioma>();
+	private List<Idioma> listAllCountries = new ArrayList<Idioma>();
+	private SelectFromTable selectFromTable = new SelectFromTable(); 
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		listAllCountries = SelectFromTable.SelectTableIdiomas();
+		listAllCountries = selectFromTable.SelectTableIdiomas();
 		req.setAttribute("listAllCountries", listAllCountries);
 		redirect(req,resp); 
 		

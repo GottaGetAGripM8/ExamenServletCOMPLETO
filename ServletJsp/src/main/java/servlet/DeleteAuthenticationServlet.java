@@ -28,10 +28,6 @@ public class DeleteAuthenticationServlet extends HttpServlet{
 
 	} 
 	
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-	}
 
 	private void redirect(HttpServletResponse resp) throws IOException, ServletException {
 		resp.sendRedirect("EndDelete.jsp");

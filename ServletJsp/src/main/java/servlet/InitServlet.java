@@ -16,23 +16,27 @@ import h2.InsertIntoTable;
 public class InitServlet extends HttpServlet{
 	
 	private String countryName, avaliableLanguage, newLanguage;
-		
+	
+	private RecoverData recoverData = new RecoverData();
+	private CreateNewTable createNewTable = new CreateNewTable();
+	private InsertIntoTable insertIntoTable = new InsertIntoTable();
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		 
-		countryName = RecoverData.fromPais(req, resp);
-		avaliableLanguage = RecoverData.fromIdiomaDisponible(req, resp);
-		newLanguage = RecoverData.fromNuevoIdioma(req, resp); 
+		countryName = recoverData.fromPais(req, resp);
+		avaliableLanguage = recoverData.fromIdiomaDisponible(req, resp);
+		newLanguage = recoverData.fromNuevoIdioma(req, resp); 
 		
 		req.setAttribute("country", countryName);
 		req.setAttribute("language", avaliableLanguage);
 		req.setAttribute("newLanguage", newLanguage);
 		 
-		CreateNewTable.createTablePais(); 
-		CreateNewTable.createTableIdioma(); 
+		createNewTable.createTablePais(); 
+		createNewTable.createTableIdioma(); 
 		
-		InsertIntoTable.insertTablePaises(countryName); 
-		InsertIntoTable.insertTableIdiomas(newLanguage, countryName);
+		insertIntoTable.insertTablePaises(countryName); 
+		insertIntoTable.insertTableIdiomas(newLanguage, countryName);
 		
 		req.getRequestDispatcher("End.jsp").forward(req, resp);
 		  

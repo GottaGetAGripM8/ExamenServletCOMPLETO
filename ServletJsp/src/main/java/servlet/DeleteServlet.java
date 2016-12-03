@@ -13,13 +13,14 @@ import h2.DeleteFromTable;
 public class DeleteServlet extends HttpServlet{
 	
 	private String nom;
+	private DeleteFromTable deleteFromTable = new DeleteFromTable();
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String countryToDelete = req.getParameter("cToDelete");
 		
-		DeleteFromTable.deleteTableIdiomas(countryToDelete);
-		DeleteFromTable.deleteTablePaises(countryToDelete);
+		deleteFromTable.deleteTableIdiomas(countryToDelete);
+		deleteFromTable.deleteTablePaises(countryToDelete);
 		
 		redirect(resp); 
 		
@@ -33,8 +34,8 @@ public class DeleteServlet extends HttpServlet{
 				
 		req.setAttribute("country", countryToDelete);
 		
-		DeleteFromTable.deleteTableIdiomas(countryToDelete);
-		DeleteFromTable.deleteTablePaises(countryToDelete);
+		deleteFromTable.deleteTableIdiomas(countryToDelete);
+		deleteFromTable.deleteTablePaises(countryToDelete);
 		
 		redirect(resp);
 		 
