@@ -10,55 +10,41 @@
         based on the recommendations of the Application Developer's Guide.
     </description>
 	 
-	<!-- ORIGINAL -->
     <servlet> 
         <servlet-name>HelloServlet</servlet-name>
         <servlet-class>servletpackage.InitServlet</servlet-class>
     </servlet>
     
-    <!-- ORIGINAL -->
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/formulario</url-pattern>
-        <!-- 
-	
-		IMPORTANTE:
-		El <url-pattern> </url-pattern> debe coincidir con <form action="formulario" method="post"> de datos.jsp
-		
-		-->
     </servlet-mapping>
     
-    <!--SEGUNDO SERVLET -->
     <servlet>
         <servlet-name>HelloServletM</servlet-name>
         <servlet-class>servletpackage.TableIdiomasServlet</servlet-class>
     </servlet>
 
-    <!--SEGUNDO SERVLET -->
     <servlet-mapping>
         <servlet-name>HelloServletM</servlet-name>
         <url-pattern>/muestra</url-pattern>
     </servlet-mapping>
     
-     <!--TERCER SERVLET -->
     <servlet>
         <servlet-name>HelloServletBA</servlet-name>
         <servlet-class>servletpackage.DeleteAuthenticationServlet</servlet-class>
     </servlet>
 
-    <!--TERCER SERVLET -->
     <servlet-mapping>
         <servlet-name>HelloServletBA</servlet-name>
         <url-pattern>/HolaBA</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping> 
     
-    <!--CUARTO SERVLET -->
     <servlet>
         <servlet-name>HelloServletB</servlet-name>
         <servlet-class>servletpackage.DeleteServlet</servlet-class>
     </servlet>
     
-    <!--CUARTO SERVLET -->
 	<servlet-mapping>
         <servlet-name>HelloServletB</servlet-name>
         <url-pattern>/Hola</url-pattern>

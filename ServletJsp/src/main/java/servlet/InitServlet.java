@@ -19,24 +19,20 @@ public class InitServlet extends HttpServlet{
 		
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		//Getting data  
+		 
 		countryName = RecoverData.fromPais(req, resp);
 		avaliableLanguage = RecoverData.fromIdiomaDisponible(req, resp);
 		newLanguage = RecoverData.fromNuevoIdioma(req, resp); 
 		
-		//Set values from datos.jsp in fin.jsp 
 		req.setAttribute("country", countryName);
 		req.setAttribute("language", avaliableLanguage);
 		req.setAttribute("newLanguage", newLanguage);
-		
-		//Create table 
+		 
 		CreateNewTable.createTablePais(); 
 		CreateNewTable.createTableIdioma(); 
 		
-		//Insert into table 
 		InsertIntoTable.insertTablePaises(countryName); 
-		InsertIntoTable.insertTableIdiomas(newLanguage, countryName);//Inserta Idioma, sino, lo actualiza
+		InsertIntoTable.insertTableIdiomas(newLanguage, countryName);
 		
 		req.getRequestDispatcher("End.jsp").forward(req, resp);
 		  

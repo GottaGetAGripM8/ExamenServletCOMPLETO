@@ -5,7 +5,7 @@ public class InsertIntoTable {
 	private static H2Query h2query = new H2Query();
 	
 	public static void main(String[] args) {
-		insertTableIdiomas("Español", "España");
+		
 	}
 	
     public static void insertTablePaises(String nom) {

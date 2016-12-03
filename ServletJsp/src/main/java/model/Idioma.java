@@ -14,7 +14,6 @@ public class Idioma {
 			nomIdioma = n;
 		}
 		
-		//---------------------------------//
 		
 		public int getIdIdioma(){
 			return idIdioma; 
@@ -24,7 +23,6 @@ public class Idioma {
 			idIdioma = i;
 		}
 
-		//---------------------------------//
 		
 		public String getnomPais(){
 			return nomPais;

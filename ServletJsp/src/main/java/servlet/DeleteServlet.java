@@ -18,18 +18,12 @@ public class DeleteServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String countryToDelete = req.getParameter("cToDelete");
 		
-		//req.setAttribute("nom", pBorrar);
-		
 		DeleteFromTable.deleteTableIdiomas(countryToDelete);
 		DeleteFromTable.deleteTablePaises(countryToDelete);
-		
-		//req.setAttribute("country", pBorrar);
 		
 		redirect(resp);
 		
 		super.doPost(req, resp);
-		
-		
 
 	} 
 	

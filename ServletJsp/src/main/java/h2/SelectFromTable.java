@@ -27,9 +27,9 @@ public class SelectFromTable {
 			while(rs.next()){
 				Idioma idiomaInDatabase = new Idioma();
 				
-				idiomaInDatabase.setnomIdioma(rs.getString(1)); //nomPais
+				idiomaInDatabase.setnomIdioma(rs.getString(1)); 
 				
-				idiomaInDatabase.setnomPais(rs.getString(2)); //nomPais
+				idiomaInDatabase.setnomPais(rs.getString(2)); 
 				
 				listLanguages.add(idiomaInDatabase);
 			}
