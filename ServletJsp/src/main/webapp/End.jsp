@@ -43,7 +43,7 @@
 		<form action="HolaBA" method="post"> 
 	        <div align="center"> 
 	 
-				<input type="hidden" value="${country}" name="nomB" id="nomB">
+				<input type="hidden" value="${country}" name="cToDelete" id="cToDelete">
 				<input type="submit" value="Borrar datos">
 	
 			</div>

@@ -16,19 +16,19 @@ public class DeleteAuthenticationServlet extends HttpServlet{
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String pBorrar = req.getParameter("nomB");
+		String cToDelete = req.getParameter("cToDelete");
 		
 		//req.setAttribute("nom", pBorrar);
 		
 		//DeleteFromTable.deleteTableIdiomas(pBorrar);
 		//DeleteFromTable.deleteTablePaises(pBorrar);
 		
-		req.setAttribute("country", pBorrar);
+		req.setAttribute("country", cToDelete);
 		
 		req.getRequestDispatcher("EndDelete.jsp").forward(req, resp);
 		
 		super.doPost(req, resp);
-		
+		 
 		redirect(resp);
 
 	} 

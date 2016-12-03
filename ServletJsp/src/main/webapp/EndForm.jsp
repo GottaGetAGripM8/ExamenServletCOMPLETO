@@ -7,7 +7,7 @@
 <title>Mensaje de borrado</title>
 </head> 
 <body>
-		<div align="center">
+		<div align="center">  
 			<h2>Se han borrado los datos de la DB</h2><br>
 				
 			

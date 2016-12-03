@@ -30,19 +30,19 @@
 					
 					<tr>
 						<td> <h3>PAIS:</h3></td>
-						<td><input type="text" id="pais" name="pais" ></td>
+						<td><input type="text" id="Ncountry" name="Ncountry" ></td>
 					</tr>
 					 
 					<tr>
 						<td><h3>INSERTA IDIOMA</h3></td>
-						<td><input type="text" id="nuevoIdioma" name="nuevoIdioma"></td>
+						<td><input type="text" id="Nlanguage" name="Nlanguage"></td>
 					</tr>
 					 
 					<tr>
 						<td><h3>IDIOMAS:</h3></td>
 						<td>			
-							<select id="idiomaDis" name="idiomaDis"> 
-								<option> Selecciona un idioma </option>
+							<select id="AvaliableLang" name="AvaliableLang"> 
+								<option> Selecciona un idioma </option> 
 									
 									<%
 									

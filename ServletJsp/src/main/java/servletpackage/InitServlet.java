@@ -15,28 +15,28 @@ import h2package.InsertIntoTable;
 
 public class InitServlet extends HttpServlet{
 	
-	private String nomPais, idiomaDisponible, nuevoIdioma;
+	private String countryName, avaliableLanguage, newLanguage;
 		
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		//Getting data 
-		nomPais = RecoverData.fromPais(req, resp);
-		idiomaDisponible = RecoverData.fromIdiomaDisponible(req, resp);
-		nuevoIdioma = RecoverData.fromNuevoIdioma(req, resp);
+		//Getting data  
+		countryName = RecoverData.fromPais(req, resp);
+		avaliableLanguage = RecoverData.fromIdiomaDisponible(req, resp);
+		newLanguage = RecoverData.fromNuevoIdioma(req, resp); 
 		
 		//Set values from datos.jsp in fin.jsp 
-		req.setAttribute("country", nomPais);
-		req.setAttribute("language", idiomaDisponible);
-		req.setAttribute("newLanguage", nuevoIdioma);
+		req.setAttribute("country", countryName);
+		req.setAttribute("language", avaliableLanguage);
+		req.setAttribute("newLanguage", newLanguage);
 		
 		//Create table 
 		CreateNewTable.createTablePais(); 
 		CreateNewTable.createTableIdioma(); 
 		
 		//Insert into table 
-		InsertIntoTable.insertTablePaises(nomPais); 
-		InsertIntoTable.insertTableIdiomas(nuevoIdioma, nomPais);//Inserta Idioma, sino, lo actualiza
+		InsertIntoTable.insertTablePaises(countryName); 
+		InsertIntoTable.insertTableIdiomas(newLanguage, countryName);//Inserta Idioma, sino, lo actualiza
 		
 		req.getRequestDispatcher("End.jsp").forward(req, resp);
 		  
