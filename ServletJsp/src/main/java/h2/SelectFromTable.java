@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import util.Idioma;
+import model.Idioma;
 
 public class SelectFromTable {
 	

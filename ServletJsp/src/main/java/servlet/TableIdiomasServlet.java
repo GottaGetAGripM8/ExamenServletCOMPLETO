@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import h2.SelectFromTable;
-import util.Idioma;;
+import model.Idioma;;
 
 
 public class TableIdiomasServlet extends HttpServlet {
