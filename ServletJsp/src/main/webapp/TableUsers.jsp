@@ -35,26 +35,26 @@
 				
 			</tr>
 			
-		</thead>
+		</thead> 
 		
 		<tbody>
 		
-			<c:forEach var="user1" items="${listAllUsers}">
+			<c:forEach var="country" items="${listAllCountries}">
 			
 				<tr>
 				
-					<td align="center"><c:out value="${user1.nomIdioma}"/> </td>
+					<td align="center"><c:out value="${country.nomIdioma}"/> </td>
 					
-					<td align="center"><c:out value="${user1.nomPais}"/> </td>
+					<td align="center"><c:out value="${country.nomPais}"/> </td>
 					
 					
-					<td align="center"><a name="user" href="Hola?user=${user1.nomPais}">ELIMINAR</a></td>
+					<td align="center"><a name="user" href="Hola?user=${country.nomPais}">ELIMINAR</a></td>
 					
 		    	</tr>
 		    	
 			</c:forEach>
 			
-		</tbody>
+		</tbody> 
 		
 	</table>
 		

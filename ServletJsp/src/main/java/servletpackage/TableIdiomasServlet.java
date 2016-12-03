@@ -15,13 +15,13 @@ import utilpackage.Idioma;;
 
 
 public class TableIdiomasServlet extends HttpServlet {
-	List<Idioma> listAllUsers = new ArrayList<Idioma>();
+	List<Idioma> listAllCountries = new ArrayList<Idioma>();
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		listAllUsers = SelectFromTable.SelectTableIdiomas();
-		req.setAttribute("listAllUsers", listAllUsers);
-		redirect(req,resp);
+		listAllCountries = SelectFromTable.SelectTableIdiomas();
+		req.setAttribute("listAllCountries", listAllCountries);
+		redirect(req,resp); 
 		
 		super.doPost(req, resp);
 	}
