@@ -10,11 +10,11 @@ public class CreateNewTable {
 	}
 	public static void createTablePais() {
 		
-		String sqlPais = "CREATE TABLE IF NOT EXISTS Paises " +
+		final String sqlCountry = "CREATE TABLE IF NOT EXISTS Paises " +
 					 " (nomPais VARCHAR(255), " +
 				     " PRIMARY KEY(nomPais))";
 
-		h2query.doSqlQuery(sqlPais);
+		h2query.doSqlQuery(sqlCountry);
 		
 		
 		
@@ -22,12 +22,12 @@ public class CreateNewTable {
 
 	public static void createTableIdioma() {
 		
-		String sqlIdioma = "CREATE TABLE IF NOT EXISTS Idiomas " +
+		final String sqlLang = "CREATE TABLE IF NOT EXISTS Idiomas " +
 				 " (nomIdioma VARCHAR(255), " +
 			     " nomPais VARCHAR(255), " +
 			     " PRIMARY KEY(nomIdioma))";
 
-		h2query.doSqlQuery(sqlIdioma);
+		h2query.doSqlQuery(sqlLang);
 	
 	} 
 	
