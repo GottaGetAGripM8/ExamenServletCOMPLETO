@@ -1,4 +1,4 @@
-package servletpackage;
+package servlet;
 
 import java.io.IOException;
 
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import h2package.DeleteFromTable;
+import h2.DeleteFromTable;
 
 
 public class DeleteAuthenticationServlet extends HttpServlet{

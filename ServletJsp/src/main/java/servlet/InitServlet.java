@@ -1,4 +1,4 @@
-package servletpackage;
+package servlet;
 
 import java.io.IOException;
 
@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import h2package.CreateNewTable;
-import h2package.InsertIntoTable;
+import h2.CreateNewTable;
+import h2.InsertIntoTable;
 
 
 

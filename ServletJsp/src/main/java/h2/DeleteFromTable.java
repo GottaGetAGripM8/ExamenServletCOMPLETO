@@ -1,4 +1,4 @@
-package h2package;
+package h2;
 
 public class DeleteFromTable {
 	

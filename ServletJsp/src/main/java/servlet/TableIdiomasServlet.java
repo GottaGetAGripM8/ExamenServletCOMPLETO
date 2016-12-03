@@ -1,4 +1,4 @@
-package servletpackage;
+package servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import h2package.SelectFromTable;
-import utilpackage.Idioma;;
+import h2.SelectFromTable;
+import util.Idioma;;
 
 
 public class TableIdiomasServlet extends HttpServlet {

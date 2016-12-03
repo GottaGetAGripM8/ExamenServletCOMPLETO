@@ -1,4 +1,4 @@
-package utilpackage;
+package util;
 
 public class Idioma {
 		

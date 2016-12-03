@@ -1,4 +1,4 @@
-package h2package;
+package h2;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;

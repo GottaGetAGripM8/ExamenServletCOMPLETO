@@ -1,5 +1,5 @@
 
-package h2package;
+package h2;
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import utilpackage.Idioma;
+import util.Idioma;
 
 public class SelectFromTable {
 	

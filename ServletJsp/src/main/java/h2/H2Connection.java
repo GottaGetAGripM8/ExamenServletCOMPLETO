@@ -1,4 +1,4 @@
-package h2package;
+package h2;
 
 import java.io.File;
 import java.nio.file.Paths;
