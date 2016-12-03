@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Data from form</title>
 </head> 
 <body>
 
@@ -12,21 +12,21 @@
 		
 				<table width=350>
 					<tr>
-						<td colspan="2" align="center"> <h2> DATOS INSERTADOS <hr></h2> </td>
+						<td colspan="2" align="center"> <h2> INSERTED DATA <hr></h2> </td>
 					</tr>
 					
 					<tr>
-						<td><h3>Pais:</h3></td>
+						<td><h3>COUNTRY:</h3></td>
 						<td id="country" name="country"><h3>${country}</h3></td>
 					</tr>
 					 
 					<tr>
-						<td><h3>Idioma:</h3></td>
+						<td><h3>LANGUAGE:</h3></td>
 						<td id="language" name="language"><h3>${language} </h3></td>
 					</tr>
 					 
 					<tr>
-						<td><h3>Nuevo Idioma:</h3></td>
+						<td><h3>NEW LANGUAGE:</h3></td>
 						<td id="newLanguage" name="newLanguage"><h3>${newLanguage}</h3></td>
 					</tr>
 					
@@ -35,16 +35,16 @@
 		</div>
 		
 		<div align="center">
-			<a href="datos.jsp"><input type="button" value="Volver al formulario"></a>		
+			<a href="Index.jsp"><input type="button" value="Come back to Index"></a>		
 		</div>
 		
 		<br>
 		
-		<form action="HolaBA" method="post"> 
+		<form action="reallyWant2Del" method="post"> 
 	        <div align="center"> 
 	 
-				<input type="hidden" value="${country}" name="nomB" id="nomB">
-				<input type="submit" value="Borrar datos">
+				<input type="hidden" value="${country}" name="cToDelete" id="cToDelete">
+				<input type="submit" value="Delete data">
 	
 			</div>
 	 	</form>

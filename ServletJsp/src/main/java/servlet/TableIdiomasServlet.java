@@ -1,4 +1,4 @@
-package servletpackage;
+package servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,24 +10,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import h2package.SelectFromTable;
-import utilpackage.Idioma;;
+import h2.SelectFromTable;
+import model.Idioma;;
 
 
-public class ServletTableIdioma extends HttpServlet {
-	List<Idioma> listAllUsers = new ArrayList<Idioma>();
+public class TableIdiomasServlet extends HttpServlet {
+	private List<Idioma> listAllCountries = new ArrayList<Idioma>();
+	private SelectFromTable selectFromTable = new SelectFromTable(); 
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		listAllUsers = SelectFromTable.SelectTableIdiomas();
-		req.setAttribute("listAllUsers", listAllUsers);
-		redirect(req,resp);
+		listAllCountries = selectFromTable.SelectTableIdiomas();
+		req.setAttribute("listAllCountries", listAllCountries);
+		redirect(req,resp); 
 		
 		super.doPost(req, resp);
 	}
 
 	private void redirect(HttpServletRequest req,HttpServletResponse resp) throws IOException, ServletException {
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/tablaUsers.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/TableUsers.jsp");
 		dispatcher.forward(req,resp);
 		
 	}

@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Mensaje de borrado</title>
 </head> 
 <body>
-		<div align="center">
-			<h2>Se han borrado los datos de la DB</h2><br>
+		<div align="center">  
+			<h2>Your data have been successfully deleted</h2><br>
 				
 			
 			<div align="center">
-				<a href="datos.jsp"><input type="button" value="Volver al formulario"></a>		
+				<a href="Index.jsp"><input type="button" value="Come back to Index"></a>		
 			</div>
 			
 			<br>

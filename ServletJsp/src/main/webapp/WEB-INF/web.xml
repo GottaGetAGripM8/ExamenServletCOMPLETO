@@ -9,63 +9,69 @@
         This is a simple web application with a source code organization
         based on the recommendations of the Application Developer's Guide.
     </description>
-	
-	<!-- ORIGINAL -->
+	 
     <servlet> 
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>servletpackage.Servlet</servlet-class>
+        <servlet-name>initialForm</servlet-name>
+        <servlet-class>servlet.InitServlet</servlet-class>
     </servlet>
     
-    <!-- ORIGINAL -->
     <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/formulario</url-pattern>
-        <!--
-	
-		IMPORTANTE:
-		El <url-pattern> </url-pattern> debe coincidir con <form action="formulario" method="post"> de datos.jsp
-		
-		-->
+        <servlet-name>initialForm</servlet-name>
+        <url-pattern>/firstForm</url-pattern>
     </servlet-mapping>
     
-    <!--SEGUNDO SERVLET -->
+    
+    
+    
+    
     <servlet>
-        <servlet-name>HelloServletM</servlet-name>
-        <servlet-class>servletpackage.ServletTableIdioma</servlet-class>
+        <servlet-name>showDBTable</servlet-name>
+        <servlet-class>servlet.TableIdiomasServlet</servlet-class>
     </servlet>
 
-    <!--SEGUNDO SERVLET -->
     <servlet-mapping>
-        <servlet-name>HelloServletM</servlet-name>
-        <url-pattern>/muestra</url-pattern>
+        <servlet-name>showDBTable</servlet-name>
+        <url-pattern>/showMeData</url-pattern>
     </servlet-mapping>
+        
     
-     <!--TERCER SERVLET -->
+    
+    
+    
     <servlet>
-        <servlet-name>HelloServletBA</servlet-name>
-        <servlet-class>servletpackage.ServletBorrarAutenticacion</servlet-class>
+        <servlet-name>confirmDelete</servlet-name>
+        <servlet-class>servlet.DeleteAuthenticationServlet</servlet-class>
     </servlet>
 
-    <!--TERCER SERVLET -->
     <servlet-mapping>
-        <servlet-name>HelloServletBA</servlet-name>
-        <url-pattern>/HolaBA</url-pattern>
-    </servlet-mapping>
+        <servlet-name>confirmDelete</servlet-name>
+        <url-pattern>/reallyWant2Del</url-pattern>
+    </servlet-mapping> 
+        
     
-    <!--CUARTO SERVLET -->
+    
+    
+    
     <servlet>
-        <servlet-name>HelloServletB</servlet-name>
-        <servlet-class>servletpackage.ServletBorrar</servlet-class>
+        <servlet-name>goDeleteIt</servlet-name>
+        <servlet-class>servlet.DeleteServlet</servlet-class>
     </servlet>
     
-    <!--CUARTO SERVLET -->
 	<servlet-mapping>
-        <servlet-name>HelloServletB</servlet-name>
-        <url-pattern>/Hola</url-pattern>
+        <servlet-name>goDeleteIt</servlet-name>
+        <url-pattern>/letMeDeleteIt</url-pattern>
     </servlet-mapping>
+        <!--
+        CAMBIAR LA VARIABLE DE NOMBRE AQUI Y EN 
+        SU SERVLET
+        
+        TABLE USER Hola?user=${country.nomPais} -->
+    
+    
+    
     
     <welcome-file-list>
-    	<welcome-file>datos.jsp</welcome-file>
+    	<welcome-file>Index.jsp</welcome-file>
 	</welcome-file-list>
 
 </web-app>     

@@ -1,5 +1,5 @@
 
-package h2package;
+package h2;
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -7,13 +7,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import utilpackage.Idioma;
+import model.Idioma;
 
 public class SelectFromTable {
 	
 	private static H2Query h2query = new H2Query();
 	private static List<Idioma> listLanguages= new ArrayList<Idioma>();
-	public static List SelectTableIdiomas() {
+	public List SelectTableIdiomas() {
 		try {
 			String sql = "SELECT * FROM Idiomas";
 		
@@ -27,9 +27,9 @@ public class SelectFromTable {
 			while(rs.next()){
 				Idioma idiomaInDatabase = new Idioma();
 				
-				idiomaInDatabase.setnomIdioma(rs.getString(1)); //nomPais
+				idiomaInDatabase.setnomIdioma(rs.getString(1)); 
 				
-				idiomaInDatabase.setnomPais(rs.getString(2)); //nomPais
+				idiomaInDatabase.setnomPais(rs.getString(2)); 
 				
 				listLanguages.add(idiomaInDatabase);
 			}

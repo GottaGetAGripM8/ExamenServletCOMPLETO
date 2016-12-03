@@ -1,4 +1,4 @@
-package servletpackage;
+package servlet;
 
 import java.io.IOException;
 
@@ -7,50 +7,45 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import h2package.DeleteFromTable;
+import h2.DeleteFromTable;
 
 
-public class ServletBorrarAutenticacion extends HttpServlet{
+public class DeleteServlet extends HttpServlet{
 	
 	private String nom;
+	private DeleteFromTable deleteFromTable = new DeleteFromTable();
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String pBorrar = req.getParameter("nomB");
+		String countryToDelete = req.getParameter("cToDelete");
 		
-		//req.setAttribute("nom", pBorrar);
+		deleteFromTable.deleteTableIdiomas(countryToDelete);
+		deleteFromTable.deleteTablePaises(countryToDelete);
 		
-		//DeleteFromTable.deleteTableIdiomas(pBorrar);
-		//DeleteFromTable.deleteTablePaises(pBorrar);
-		
-		req.setAttribute("country", pBorrar);
-		
-		req.getRequestDispatcher("FinBorrado.jsp").forward(req, resp);
+		redirect(resp); 
 		
 		super.doPost(req, resp);
-		
-		redirect(resp);
 
 	} 
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String user = req.getParameter("user");
+		String countryToDelete = req.getParameter("country");
 				
-		req.setAttribute("nom", user);
+		req.setAttribute("country", countryToDelete);
 		
-		DeleteFromTable.deleteTableIdiomas(user);
-		DeleteFromTable.deleteTablePaises(user);
+		deleteFromTable.deleteTableIdiomas(countryToDelete);
+		deleteFromTable.deleteTablePaises(countryToDelete);
 		
 		redirect(resp);
-		
+		 
 		redirect(resp);
 		
 		super.doPost(req, resp);
 	}
 
 	private void redirect(HttpServletResponse resp) throws IOException, ServletException {
-		resp.sendRedirect("FinBorrado.jsp");
+		resp.sendRedirect("EndForm.jsp");
 	}
 	
 }
