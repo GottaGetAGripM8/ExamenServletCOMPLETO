@@ -8,11 +8,11 @@
 </head> 
 <body>
 		<div align="center">  
-			<h2>Se han borrado los datos de la DB</h2><br>
+			<h2>Your data have been successfully deleted</h2><br>
 				
 			
 			<div align="center">
-				<a href="Index.jsp"><input type="button" value="Volver al formulario"></a>		
+				<a href="Index.jsp"><input type="button" value="Come back to Index"></a>		
 			</div>
 			
 			<br>

@@ -9,14 +9,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Tabla de Usuarios</title>
+<title>Language's table</title>
 </head>
 <body>
 
 <table align="center">
 		<tr>
 				
-			<td colspan="4" align="center"> <h2> USUARIOS DE LA BASE DE DATOS  <hr></h2> </td>
+			<td colspan="4" align="center"> <h2> LANGUAGES IN OUR DATABASE  <hr></h2> </td>
 				
 		</tr>
 </table>
@@ -27,11 +27,11 @@
 			
 			<tr> 
 			
-				<td align="center">Idioma</td>
+				<td align="center">Language</td>
 				
-				<td align="center">Pais</td>
+				<td align="center">Country</td>
 				
-				<td align="center">ACCION</td>
+				<td align="center">ACTION</td>
 				
 			</tr>
 			
@@ -48,7 +48,7 @@
 					<td align="center"><c:out value="${country.nomPais}"/> </td>
 					
 					
-					<td align="center"><a name="user" href="letMeDeleteIt?user=${country.nomPais}">ELIMINAR</a></td>
+					<td align="center"><a name="country" href="letMeDeleteIt?country=${country.nomPais}">DELETE</a></td>
 					
 		    	</tr>
 		    	
@@ -62,9 +62,9 @@
 			
 			<center>
 				
-				<input type="submit"  value="Mostrar">
+				<input type="submit"  value="Show">
 				
-				<a href="Index.jsp"><input type="button" value="Volver al formulario"></a>
+				<a href="Index.jsp"><input type="button" value="Come back to Index"></a>
 			
 			</center>
 		

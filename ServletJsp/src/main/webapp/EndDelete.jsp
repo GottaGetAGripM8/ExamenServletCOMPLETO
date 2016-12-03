@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Confirmacion de borrado</title>
+<title>Delete confirmation</title>
 </head> 
 <body>
 		<div align="center">
-			<h2>Seguro que quiere borrar ${country} de la BD ? </h2><br>
+			<h2>Are you sure you want to delete ${country} from the database? </h2><br>
 				
 			
 			<div align="center">
@@ -18,13 +18,13 @@
 			        <div align="center"> 
 			 
 						<input type="hidden" value="${country}" name="cToDelete" id="cToDelete">
-						<input type="submit" value="Si">
+						<input type="submit" value="Yes">
 			
 					</div>
 	 	</form>
 				
 					
-			</div>
+			</div> 
 			
 			<br>
 		</div> 
