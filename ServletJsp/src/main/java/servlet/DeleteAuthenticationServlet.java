@@ -16,7 +16,7 @@ public class DeleteAuthenticationServlet extends HttpServlet{
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String cToDelete = req.getParameter("cToDelete");
+		String cToDelete = req.getParameter("countryToDelete");
 		
 		req.setAttribute("country", cToDelete);
 		

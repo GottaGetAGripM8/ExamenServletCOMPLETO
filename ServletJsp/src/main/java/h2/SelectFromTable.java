@@ -41,7 +41,7 @@ public class SelectFromTable {
 	                if (H2Connection.stmt!=null)
 	                	H2Connection.conn.close();
 	            } catch (SQLException se) {
-	            } //do nothing
+	            } 
 	            try {
 	                if (H2Connection.conn!= null)
 	                	H2Connection.conn.close();

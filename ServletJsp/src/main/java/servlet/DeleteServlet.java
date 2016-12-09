@@ -17,7 +17,7 @@ public class DeleteServlet extends HttpServlet{
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String countryToDelete = req.getParameter("cToDelete");
+		String countryToDelete = req.getParameter("countryToDelete");
 		
 		deleteFromTable.deleteTableIdiomas(countryToDelete);
 		deleteFromTable.deleteTablePaises(countryToDelete);

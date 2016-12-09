@@ -17,7 +17,7 @@
 				<form action="letMeDeleteIt" method="post"> 
 			        <div align="center"> 
 			 
-						<input type="hidden" value="${country}" name="cToDelete" id="cToDelete">
+						<input type="hidden" value="${country}" name="countryToDelete" id="countryToDelete">
 						<input type="submit" value="Yes">
 			
 					</div>
