@@ -43,12 +43,12 @@
 			
 				<tr>
 				
-					<td align="center"><c:out value="${country.nomIdioma}"/> </td>
+					<td align="center"><c:out value="${country.nameLang}"/> </td>
 					
-					<td align="center"><c:out value="${country.nomPais}"/> </td>
+					<td align="center"><c:out value="${country.nameCountry}"/> </td>
 					
 					
-					<td align="center"><a name="country" href="letMeDeleteIt?country=${country.nomPais}">DELETE</a></td>
+					<td align="center"><a name="country" href="letMeDeleteIt?country=${country.nameCountry}">DELETE</a></td>
 					
 		    	</tr>
 		    	
