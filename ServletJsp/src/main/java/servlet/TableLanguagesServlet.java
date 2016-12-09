@@ -14,7 +14,7 @@ import h2.SelectFromTable;
 import model.Language;;
 
 
-public class TableIdiomasServlet extends HttpServlet {
+public class TableLanguagesServlet extends HttpServlet {
 	private List<Language> listAllCountries = new ArrayList<Language>();
 	private SelectFromTable selectFromTable = new SelectFromTable(); 
 	
@@ -24,12 +24,11 @@ public class TableIdiomasServlet extends HttpServlet {
 		req.setAttribute("listAllCountries", listAllCountries);
 		redirect(req,resp); 
 		
-		super.doPost(req, resp);
+		super.doPost(req, resp); 
 	}
 
 	private void redirect(HttpServletRequest req,HttpServletResponse resp) throws IOException, ServletException {
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/TableLanguages.jsp");
 		dispatcher.forward(req,resp);
-		
 	}
 }
