@@ -8,17 +8,17 @@ public class InsertIntoTable {
 		
 	}
 	
-    public void insertTablePaises(String nom) {
+    public void insertTablePaises(String name) {
         
-    	String sql = "REPLACE INTO Paises (nomPais) VALUES ('" + nom + "')";
+    	final String sql = "REPLACE INTO Paises (nomPais) VALUES ('" + name + "')";
     	
     	h2query.doSqlQuery(sql);
     	
     } 
     
-    public void insertTableIdiomas(String idi, String nomp) {
+    public void insertTableIdiomas(String lang, String nameC) {
         
-    	String sql = "REPLACE INTO Idiomas (nomIdioma, nomPais) VALUES ('" + idi + "', '" + nomp +"')";
+    	final String sql = "REPLACE INTO Idiomas (nomIdioma, nomPais) VALUES ('" + lang + "', '" + nameC +"')";
     	
     	h2query.doSqlQuery(sql);
     	

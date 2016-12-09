@@ -13,9 +13,12 @@ public class SelectFromTable {
 	
 	private static H2Query h2query = new H2Query();
 	private static List<Language> listLanguages= new ArrayList<Language>();
+	
+	private final static String sql = "SELECT * FROM Idiomas";
+	
 	public List SelectTableLanguages() {
 		try {
-			String sql = "SELECT * FROM Idiomas";
+			
 		
 			h2query.doSqlQuery(sql);	
 		
@@ -36,8 +39,8 @@ public class SelectFromTable {
 			
 			} catch (SQLException se) {
                 se.printStackTrace();
-			} finally { 
-				try {
+			} finally {
+	            try {
 	                if (H2Connection.stmt!=null)
 	                	H2Connection.conn.close();
 	            } catch (SQLException se) {
@@ -47,9 +50,10 @@ public class SelectFromTable {
 	                	H2Connection.conn.close();
 	            } catch (SQLException se) {
 	                se.printStackTrace();
-	            }
-	            return listLanguages;
-			}
+	            } 
+	        } 
+		
+		return listLanguages;
 	}
 
 }
