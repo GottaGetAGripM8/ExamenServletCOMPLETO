@@ -2,31 +2,31 @@ package model;
 
 public class Language {
 		
-		private int idLanguage;
-		private String nameLang, nameCountry;
+		private int IdLanguage;
+		private String NameLang, NameCountry;
 		
 		
-		public String getnameLang(){
-			return nameLang;
+		public String getNameLang(){
+			return NameLang;
 		}
 		
-		public void setnameLang(String n){
-			nameLang = n;
+		public void setNameLang(String n){
+			NameLang = n;
 		}
 		
 		public int getIdLanguage(){
-			return idLanguage; 
+			return IdLanguage; 
 		}
 		
-		public void setidLanguage(int i){
-			idLanguage = i;
+		public void setIdLanguage(int i){
+			IdLanguage = i;
 		}
 
-		public String getnameCountry(){
-			return nameCountry;
+		public String getNameCountry(){
+			return NameCountry;
 		}
 		
-		public void setnameCountry(String p){
-			nameCountry = p;
+		public void setNameCountry(String p){
+			NameCountry = p;
 		}
 	}

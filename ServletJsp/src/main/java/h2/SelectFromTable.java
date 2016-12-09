@@ -14,24 +14,24 @@ public class SelectFromTable {
 	private static H2Query h2query = new H2Query();
 	private static List<Language> listLanguages= new ArrayList<Language>();
 	
-	private final static String sql = "SELECT * FROM Idiomas";
+	private final static String SQL = "SELECT * FROM Idiomas";
 	
 	public List<Language> SelectTableLanguages() {
 		try {
 			
-			h2query.doSqlQuery(sql);	
+			h2query.doSqlQuery(SQL);	
 		
 			H2Connection.conn = DriverManager.getConnection(H2Connection.getDbUrl(), H2Connection.getUser(), H2Connection.getPass());
 			H2Connection.stmt = H2Connection.conn.createStatement();
 		
-			ResultSet rs = H2Connection.stmt.executeQuery(sql);
+			ResultSet rs = H2Connection.stmt.executeQuery(SQL);
 	
 			while(rs.next()){
 				Language LangInDatabase = new Language();
 				
-				LangInDatabase.setnameLang(rs.getString(1)); 
+				LangInDatabase.setNameLang(rs.getString(1)); 
 				
-				LangInDatabase.setnameCountry(rs.getString(2)); 
+				LangInDatabase.setNameCountry(rs.getString(2)); 
 				
 				listLanguages.add(LangInDatabase);
 			}

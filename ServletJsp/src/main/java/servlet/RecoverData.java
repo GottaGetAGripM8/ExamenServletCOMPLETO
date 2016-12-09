@@ -9,15 +9,15 @@ import javax.servlet.http.HttpServletResponse;
 
 public class RecoverData extends HttpServlet{
 	
-	public String fromPais(HttpServletRequest req) throws ServletException, IOException {
-		return req.getParameter("Ncountry").toString();
+	public String fromCountry(HttpServletRequest req) throws ServletException, IOException {
+		return req.getParameter("nameCountry").toString();
 	} 
 	
-	public String fromNuevoIdioma(HttpServletRequest req) throws ServletException, IOException {
-		return req.getParameter("Nlanguage").toString();
+	public String fromNewLanguage(HttpServletRequest req) throws ServletException, IOException {
+		return req.getParameter("nameLanguage").toString();
 	}
 	
-	public String fromIdiomaDisponible(HttpServletRequest req) throws ServletException, IOException {
+	public String fromAvaliableLanguage(HttpServletRequest req) throws ServletException, IOException {
 		return req.getParameter("AvaliableLang").toString();
 	}   
 	

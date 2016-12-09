@@ -4,17 +4,16 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
     version="2.4">
 
-    <display-name>HelloWorld Application</display-name>
+    <display-name>Servlet-Exam</display-name>
     <description>
-        This is a simple web application with a source code organization
-        based on the recommendations of the Application Developer's Guide.
+        Exam exercise about servlets and database connections.
     </description>
 	 
     <servlet> 
         <servlet-name>initialForm</servlet-name>
         <servlet-class>servlet.InitServlet</servlet-class>
     </servlet>
-    
+     
     <servlet-mapping>
         <servlet-name>initialForm</servlet-name>
         <url-pattern>/firstForm</url-pattern>
@@ -23,7 +22,7 @@
     
     <servlet>
         <servlet-name>showDBTable</servlet-name>
-        <servlet-class>servlet.TableIdiomasServlet</servlet-class>
+        <servlet-class>servlet.TableLanguagesServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
