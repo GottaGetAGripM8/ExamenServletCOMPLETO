@@ -42,7 +42,7 @@
 									
 										List <Language> listLanguageOptions = sft.SelectTableLanguages();
 										for (Language lang : listLanguageOptions){
-										   out.println("<option value ='" + lang.getnameLang() + "'>" + lang.getnameLang() + "</option>");
+										   out.println("<option value ='" + lang.getNameLang() + "'>" + lang.getNameLang() + "</option>");
 										}
 									
 									

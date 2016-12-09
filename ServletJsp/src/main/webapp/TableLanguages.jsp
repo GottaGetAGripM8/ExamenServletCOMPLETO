@@ -16,7 +16,7 @@
 <table align="center">
 		<tr>
 				
-			<td colspan="4" align="center"> <h2> LANGUAGES IN OUR DATABASE  <hr></h2> </td>
+			<td colspan="4" align="center"><hr> <h2> LANGUAGES IN OUR DATABASE  </h2> </hr></td>
 				
 		</tr>
 </table>
@@ -43,12 +43,12 @@
 			
 				<tr>
 				
-					<td align="center"><c:out value="${country.nameLang}"/> </td>
+					<td align="center"><c:out value="${country.NameLang}"/> </td>
 					
-					<td align="center"><c:out value="${country.nameCountry}"/> </td>
+					<td align="center"><c:out value="${country.NameCountry}"/> </td>
 					
 					
-					<td align="center"><a name="country" href="letMeDeleteIt?country=${country.nameCountry}">DELETE</a></td>
+					<td align="center"><a name="country" href="letMeDeleteIt?country=${country.NameCountry}">DELETE</a></td>
 					
 		    	</tr>
 		    	

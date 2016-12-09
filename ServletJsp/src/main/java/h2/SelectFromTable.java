@@ -29,9 +29,9 @@ public class SelectFromTable {
 			while(rs.next()){
 				Language LangInDatabase = new Language();
 				
-				LangInDatabase.setnameLang(rs.getString(1)); 
+				LangInDatabase.setNameLang(rs.getString(1)); 
 				
-				LangInDatabase.setnameCountry(rs.getString(2)); 
+				LangInDatabase.setNameCountry(rs.getString(2)); 
 				
 				listLanguages.add(LangInDatabase);
 			}
