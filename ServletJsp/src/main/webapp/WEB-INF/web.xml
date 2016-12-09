@@ -13,7 +13,7 @@
         <servlet-name>initialForm</servlet-name>
         <servlet-class>servlet.InitServlet</servlet-class>
     </servlet>
-    
+     
     <servlet-mapping>
         <servlet-name>initialForm</servlet-name>
         <url-pattern>/firstForm</url-pattern>
@@ -22,7 +22,7 @@
     
     <servlet>
         <servlet-name>showDBTable</servlet-name>
-        <servlet-class>servlet.TableIdiomasServlet</servlet-class>
+        <servlet-class>servlet.TableLanguagesServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
