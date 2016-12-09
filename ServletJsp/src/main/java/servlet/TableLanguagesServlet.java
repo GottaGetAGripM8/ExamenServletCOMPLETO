@@ -20,7 +20,7 @@ public class TableLanguagesServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		listAllCountries = selectFromTable.SelectTableIdiomas();
+		listAllCountries = selectFromTable.SelectTableLanguages();
 		req.setAttribute("listAllCountries", listAllCountries);
 		redirect(req,resp); 
 		

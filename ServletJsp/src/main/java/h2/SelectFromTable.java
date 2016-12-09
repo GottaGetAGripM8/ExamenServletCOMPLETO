@@ -13,7 +13,7 @@ public class SelectFromTable {
 	
 	private static H2Query h2query = new H2Query();
 	private static List<Language> listLanguages= new ArrayList<Language>();
-	public List SelectTableIdiomas() {
+	public List SelectTableLanguages() {
 		try {
 			String sql = "SELECT * FROM Idiomas";
 		
