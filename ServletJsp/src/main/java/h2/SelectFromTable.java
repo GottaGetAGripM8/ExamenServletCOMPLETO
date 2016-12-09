@@ -16,7 +16,7 @@ public class SelectFromTable {
 	
 	private final static String sql = "SELECT * FROM Idiomas";
 	
-	public List SelectTableLanguages() {
+	public List<Language> SelectTableLanguages() {
 		try {
 			
 		
@@ -28,32 +28,43 @@ public class SelectFromTable {
 			ResultSet rs = H2Connection.stmt.executeQuery(sql);
 	
 			while(rs.next()){
-				Language idiomaInDatabase = new Language();
+				Language LangInDatabase = new Language();
 				
-				idiomaInDatabase.setnameLang(rs.getString(1)); 
+				LangInDatabase.setnameLang(rs.getString(1)); 
 				
-				idiomaInDatabase.setnameCountry(rs.getString(2)); 
+				LangInDatabase.setnameCountry(rs.getString(2)); 
 				
-				listLanguages.add(idiomaInDatabase);
+				listLanguages.add(LangInDatabase);
 			}
 			
-			} catch (SQLException se) {
+			} catch (SQLException se) { 
                 se.printStackTrace();
 			} finally {
-	            try {
-	                if (H2Connection.stmt!=null)
-	                	H2Connection.conn.close();
-	            } catch (SQLException se) {
-	            } 
-	            try {
-	                if (H2Connection.conn!= null)
-	                	H2Connection.conn.close();
-	            } catch (SQLException se) {
-	                se.printStackTrace();
-	            } 
+				
+				closeH2Connection();
+	            closeH2Statement();
 	        } 
 		
 		return listLanguages;
 	}
+	
+	public void closeH2Connection(){
+		try {
+            if (H2Connection.stmt!=null)
+            	H2Connection.conn.close();
+        } catch (SQLException se) {
+        	se.printStackTrace();
+        } 
+	}
+	
+	public void closeH2Statement(){
+		try {
+            if (H2Connection.conn!= null)
+            	H2Connection.conn.close();
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+	}
+	
 
 }
