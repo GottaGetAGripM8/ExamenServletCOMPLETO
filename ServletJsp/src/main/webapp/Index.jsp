@@ -23,12 +23,12 @@
 					
 					<tr>
 						<td> <h3>COUNTRY:</h3></td>
-						<td><input type="text" id="Ncountry" name="Ncountry" ></td>
+						<td><input type="text" id="nameCountry" name="nameCountry" ></td>
 					</tr>
 					 
 					<tr>
 						<td><h3>INSERT A NEW LANGUAGE</h3></td>
-						<td><input type="text" id="Nlanguage" name="Nlanguage"></td>
+						<td><input type="text" id="nameLanguage" name="nameLanguage"></td>
 					</tr>
 					 
 					<tr>

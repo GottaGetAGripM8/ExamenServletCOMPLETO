@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 public class RecoverData extends HttpServlet{
 	
 	public String fromPais(HttpServletRequest req) throws ServletException, IOException {
-		return req.getParameter("Ncountry").toString();
+		return req.getParameter("nameCountry").toString();
 	} 
 	
 	public String fromNuevoIdioma(HttpServletRequest req) throws ServletException, IOException {
-		return req.getParameter("Nlanguage").toString();
+		return req.getParameter("nameLanguage").toString();
 	}
 	
 	public String fromIdiomaDisponible(HttpServletRequest req) throws ServletException, IOException {
