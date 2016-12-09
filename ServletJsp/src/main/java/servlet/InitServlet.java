@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import h2.CreateNewTable;
 import h2.InsertIntoTable;
 
-
-
-
 public class InitServlet extends HttpServlet{
 	
 	private String countryName, avaliableLanguage, newLanguage;
@@ -45,11 +42,6 @@ public class InitServlet extends HttpServlet{
 		redirect(resp);	 
 		
 	} 
-	
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-				
-	}
 	 
 	private void redirect(HttpServletResponse resp) throws IOException, ServletException {
 		resp.sendRedirect("End.jsp");

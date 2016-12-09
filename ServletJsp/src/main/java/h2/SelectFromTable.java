@@ -7,16 +7,18 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Idioma;
+import model.Language;
 
 public class SelectFromTable {
 	
 	private static H2Query h2query = new H2Query();
-	private static List<Idioma> listLanguages= new ArrayList<Idioma>();
-	public List SelectTableIdiomas() {
+	private static List<Language> listLanguages= new ArrayList<Language>();
+	
+	private final static String sql = "SELECT * FROM Idiomas";
+	
+	public List<Language> SelectTableLanguages() {
 		try {
-			String sql = "SELECT * FROM Idiomas";
-		
+			
 			h2query.doSqlQuery(sql);	
 		
 			H2Connection.conn = DriverManager.getConnection(H2Connection.getDbUrl(), H2Connection.getUser(), H2Connection.getPass());
@@ -25,31 +27,43 @@ public class SelectFromTable {
 			ResultSet rs = H2Connection.stmt.executeQuery(sql);
 	
 			while(rs.next()){
-				Idioma idiomaInDatabase = new Idioma();
+				Language LangInDatabase = new Language();
 				
-				idiomaInDatabase.setnomIdioma(rs.getString(1)); 
+				LangInDatabase.setnameLang(rs.getString(1)); 
 				
-				idiomaInDatabase.setnomPais(rs.getString(2)); 
+				LangInDatabase.setnameCountry(rs.getString(2)); 
 				
-				listLanguages.add(idiomaInDatabase);
+				listLanguages.add(LangInDatabase);
 			}
 			
-			} catch (SQLException se) {
+			} catch (SQLException se) { 
                 se.printStackTrace();
 			} finally {
-				try {
-	                if (H2Connection.stmt!=null)
-	                	H2Connection.conn.close();
-	            } catch (SQLException se) {
-	            } //do nothing
-	            try {
-	                if (H2Connection.conn!= null)
-	                	H2Connection.conn.close();
-	            } catch (SQLException se) {
-	                se.printStackTrace();
-	            }
-	            return listLanguages;
-			}
+				
+				closeH2Connection();
+	            closeH2Statement();
+	        } 
+		
+		return listLanguages;
 	}
+	
+	public void closeH2Connection(){
+		try {
+            if (H2Connection.stmt!=null)
+            	H2Connection.conn.close();
+        } catch (SQLException se) {
+        	se.printStackTrace();
+        } 
+	}
+	
+	public void closeH2Statement(){
+		try {
+            if (H2Connection.conn!= null)
+            	H2Connection.conn.close();
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+	}
+	
 
 }

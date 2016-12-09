@@ -21,18 +21,28 @@ public class H2Query {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            try {
-                if (H2Connection.stmt!=null)
-                	H2Connection.conn.close();
-            } catch (SQLException se) {
-            } 
-            try {
-                if (H2Connection.conn!= null)
-                	H2Connection.conn.close();
-            } catch (SQLException se) {
-                se.printStackTrace();
-            } 
+        	
+        	closeH2Connection();
+            closeH2Statement();
         } 
-        System.out.println("Goodbye!");
     }
+    
+    public void closeH2Connection(){
+		try {
+            if (H2Connection.stmt!=null)
+            	H2Connection.conn.close();
+        } catch (SQLException se) {
+        	se.printStackTrace();
+        } 
+	}
+	
+	public void closeH2Statement(){
+		try {
+            if (H2Connection.conn!= null)
+            	H2Connection.conn.close();
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+	}
+    
 }

@@ -9,14 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import h2.DeleteFromTable;
 
-
 public class DeleteAuthenticationServlet extends HttpServlet{
-	
-	private String nom;
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String cToDelete = req.getParameter("cToDelete");
+		String cToDelete = req.getParameter("countryToDelete");
 		
 		req.setAttribute("country", cToDelete);
 		
@@ -25,10 +22,8 @@ public class DeleteAuthenticationServlet extends HttpServlet{
 		super.doPost(req, resp);
 		 
 		redirect(resp);
-
 	} 
 	
-
 	private void redirect(HttpServletResponse resp) throws IOException, ServletException {
 		resp.sendRedirect("EndDelete.jsp");
 	}

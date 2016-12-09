@@ -11,25 +11,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import h2.SelectFromTable;
-import model.Idioma;;
+import model.Language;;
 
 
-public class TableIdiomasServlet extends HttpServlet {
-	private List<Idioma> listAllCountries = new ArrayList<Idioma>();
+public class TableLanguagesServlet extends HttpServlet {
+	private List<Language> listAllCountries = new ArrayList<Language>();
 	private SelectFromTable selectFromTable = new SelectFromTable(); 
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		listAllCountries = selectFromTable.SelectTableIdiomas();
+		listAllCountries = selectFromTable.SelectTableLanguages();
 		req.setAttribute("listAllCountries", listAllCountries);
 		redirect(req,resp); 
 		
-		super.doPost(req, resp);
+		super.doPost(req, resp); 
 	}
 
 	private void redirect(HttpServletRequest req,HttpServletResponse resp) throws IOException, ServletException {
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/TableUsers.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/TableLanguages.jsp");
 		dispatcher.forward(req,resp);
-		
 	}
 }

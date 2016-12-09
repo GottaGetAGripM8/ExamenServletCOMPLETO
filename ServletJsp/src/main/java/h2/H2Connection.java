@@ -18,10 +18,6 @@ public class H2Connection {
 	
 	public static Connection conn = null;
     public static Statement stmt = null;
-    
-	public static void main(String[] args) {
-		System.out.println(ruta);
-	}
 
 	public static String getJdbcDriver() {
 		return JDBC_DRIVER;

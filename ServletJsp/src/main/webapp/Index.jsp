@@ -40,9 +40,9 @@
 									<%
 										SelectFromTable sft = new SelectFromTable();	
 									
-										List <Idioma> listLanguageOptions = sft.SelectTableIdiomas();
-										for (int i=0;i<listLanguageOptions.size();i++){
-										   out.println("<option value ='"+listLanguageOptions.get(i).getnomIdioma()+"'>"+listLanguageOptions.get(i).getnomIdioma()+"</option>");
+										List <Language> listLanguageOptions = sft.SelectTableLanguages();
+										for (Language lang : listLanguageOptions){
+										   out.println("<option value ='" + lang.getnameLang() + "'>" + lang.getnameLang() + "</option>");
 										}
 									
 									
@@ -63,7 +63,7 @@
 		</form>
 		
 		<div align="center">
-			<h3><a href="TableUsers.jsp"> PRINT-OUT ALL LANGUAGES  </a></h3>
+			<h3><a href="TableLanguages.jsp"> PRINT-OUT ALL LANGUAGES  </a></h3>
 		</div>
 		
 	
