@@ -9,10 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import h2.DeleteFromTable;
 
-
 public class DeleteServlet extends HttpServlet{
 	
-	private String nom;
 	private DeleteFromTable deleteFromTable = new DeleteFromTable();
 	
 	@Override
@@ -25,7 +23,6 @@ public class DeleteServlet extends HttpServlet{
 		redirect(resp); 
 		
 		super.doPost(req, resp);
-
 	} 
 	
 	@Override

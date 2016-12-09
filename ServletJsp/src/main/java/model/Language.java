@@ -14,7 +14,6 @@ public class Language {
 			nameLang = n;
 		}
 		
-		
 		public int getIdLanguage(){
 			return idLanguage; 
 		}
@@ -23,7 +22,6 @@ public class Language {
 			idLanguage = i;
 		}
 
-		
 		public String getnameCountry(){
 			return nameCountry;
 		}

@@ -19,7 +19,6 @@ public class SelectFromTable {
 	public List<Language> SelectTableLanguages() {
 		try {
 			
-		
 			h2query.doSqlQuery(sql);	
 		
 			H2Connection.conn = DriverManager.getConnection(H2Connection.getDbUrl(), H2Connection.getUser(), H2Connection.getPass());
