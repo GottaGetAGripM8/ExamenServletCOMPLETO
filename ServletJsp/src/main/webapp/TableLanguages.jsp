@@ -16,7 +16,7 @@
 <table align="center">
 		<tr>
 				
-			<td colspan="4" align="center"><hr> <h2> LANGUAGES IN OUR DATABASE  </h2> </hr></td>
+			<td colspan="4" align="center"><hr> <h2> LANGUAGES IN OUR DATABASE  </h2> </td>
 				
 		</tr>
 </table>

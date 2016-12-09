@@ -29,11 +29,11 @@ public class InitServlet extends HttpServlet{
 		req.setAttribute("language", avaliableLanguage);
 		req.setAttribute("newLanguage", newLanguage);
 		 
-		createNewTable.createTablePais(); 
-		createNewTable.createTableIdioma(); 
+		createNewTable.createTableCountries(); 
+		createNewTable.createTableLanguage(); 
 		
-		insertIntoTable.insertTablePaises(countryName); 
-		insertIntoTable.insertTableIdiomas(newLanguage, countryName);
+		insertIntoTable.insertTableCountries(countryName); 
+		insertIntoTable.insertTableLanguages(newLanguage, countryName);
 		
 		req.getRequestDispatcher("End.jsp").forward(req, resp);
 		  

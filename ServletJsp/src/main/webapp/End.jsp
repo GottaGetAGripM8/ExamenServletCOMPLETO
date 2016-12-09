@@ -12,7 +12,7 @@
 		
 				<table width=350>
 					<tr>
-						<td colspan="2" align="center"> <h2> INSERTED DATA <hr></h2> </td>
+						<td colspan="2" align="center"> <h2> INSERTED DATA </h2> </td>
 					</tr>
 					
 					<tr>

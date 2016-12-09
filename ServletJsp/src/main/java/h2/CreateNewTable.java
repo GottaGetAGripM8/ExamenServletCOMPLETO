@@ -8,11 +8,11 @@ public class CreateNewTable {
 	
 	private final static String SQLLANG = "CREATE TABLE IF NOT EXISTS Idiomas " + " (nomIdioma VARCHAR(255), " + " nomPais VARCHAR(255), " + " PRIMARY KEY(nomIdioma))";
 	
-	public void createTablePais() {
+	public void createTableCountries() {
 		h2query.doSqlQuery(SQLCOUNTRY);
 	}
 
-	public void createTableIdioma() {
+	public void createTableLanguage() {
 		h2query.doSqlQuery(SQLLANG);
 	} 
 	
