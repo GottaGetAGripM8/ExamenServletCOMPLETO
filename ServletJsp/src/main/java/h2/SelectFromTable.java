@@ -7,12 +7,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Idioma;
+import model.Language;
 
 public class SelectFromTable {
 	
 	private static H2Query h2query = new H2Query();
-	private static List<Idioma> listLanguages= new ArrayList<Idioma>();
+	private static List<Language> listLanguages= new ArrayList<Language>();
 	public List SelectTableIdiomas() {
 		try {
 			String sql = "SELECT * FROM Idiomas";
@@ -25,18 +25,18 @@ public class SelectFromTable {
 			ResultSet rs = H2Connection.stmt.executeQuery(sql);
 	
 			while(rs.next()){
-				Idioma idiomaInDatabase = new Idioma();
+				Language idiomaInDatabase = new Language();
 				
-				idiomaInDatabase.setnomIdioma(rs.getString(1)); 
+				idiomaInDatabase.setnameLang(rs.getString(1)); 
 				
-				idiomaInDatabase.setnomPais(rs.getString(2)); 
+				idiomaInDatabase.setnameCountry(rs.getString(2)); 
 				
 				listLanguages.add(idiomaInDatabase);
 			}
 			
 			} catch (SQLException se) {
                 se.printStackTrace();
-			} finally {
+			} finally { 
 				try {
 	                if (H2Connection.stmt!=null)
 	                	H2Connection.conn.close();

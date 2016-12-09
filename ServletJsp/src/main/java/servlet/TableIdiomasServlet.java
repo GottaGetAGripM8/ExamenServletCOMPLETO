@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import h2.SelectFromTable;
-import model.Idioma;;
+import model.Language;;
 
 
 public class TableIdiomasServlet extends HttpServlet {
-	private List<Idioma> listAllCountries = new ArrayList<Idioma>();
+	private List<Language> listAllCountries = new ArrayList<Language>();
 	private SelectFromTable selectFromTable = new SelectFromTable(); 
 	
 	@Override
