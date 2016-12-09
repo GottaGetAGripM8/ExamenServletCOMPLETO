@@ -21,9 +21,6 @@
     </servlet-mapping>
     
     
-    
-    
-    
     <servlet>
         <servlet-name>showDBTable</servlet-name>
         <servlet-class>servlet.TableIdiomasServlet</servlet-class>
@@ -33,9 +30,6 @@
         <servlet-name>showDBTable</servlet-name>
         <url-pattern>/showMeData</url-pattern>
     </servlet-mapping>
-        
-    
-    
     
     
     <servlet>
@@ -46,10 +40,7 @@
     <servlet-mapping>
         <servlet-name>confirmDelete</servlet-name>
         <url-pattern>/reallyWant2Del</url-pattern>
-    </servlet-mapping> 
-        
-    
-    
+    </servlet-mapping>  
     
     
     <servlet>
@@ -60,14 +51,7 @@
 	<servlet-mapping>
         <servlet-name>goDeleteIt</servlet-name>
         <url-pattern>/letMeDeleteIt</url-pattern>
-    </servlet-mapping>
-        <!--
-        CAMBIAR LA VARIABLE DE NOMBRE AQUI Y EN 
-        SU SERVLET
-        
-        TABLE USER Hola?user=${country.nomPais} -->
-    
-    
+    </servlet-mapping>   
     
     
     <welcome-file-list>
