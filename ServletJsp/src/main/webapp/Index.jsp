@@ -63,7 +63,7 @@
 		</form>
 		
 		<div align="center">
-			<h3><a href="TableUsers.jsp"> PRINT-OUT ALL LANGUAGES  </a></h3>
+			<h3><a href="TableLanguages.jsp"> PRINT-OUT ALL LANGUAGES  </a></h3>
 		</div>
 		
 	
