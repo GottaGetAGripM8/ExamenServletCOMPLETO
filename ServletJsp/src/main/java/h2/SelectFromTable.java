@@ -40,30 +40,14 @@ public class SelectFromTable {
                 se.printStackTrace();
 			} finally {
 				
-				closeH2Connection();
-	            closeH2Statement();
+				h2query.closeH2Connection();
+	            h2query.closeH2Statement();
 	        } 
 		
 		return listLanguages;
 	}
 	
-	public void closeH2Connection(){
-		try {
-            if (H2Connection.stmt!=null)
-            	H2Connection.conn.close();
-        } catch (SQLException se) {
-        	se.printStackTrace();
-        } 
-	}
 	
-	public void closeH2Statement(){
-		try {
-            if (H2Connection.conn!= null)
-            	H2Connection.conn.close();
-        } catch (SQLException se) {
-            se.printStackTrace();
-        }
-	}
 	
 
 }
