@@ -14,12 +14,12 @@ public class Language {
 			NameLang = n;
 		}
 		
-		public int getIdLanguage(){
+		public int getidLanguage(){
 			return idLanguage; 
 		}
 		
-		public void setIdLanguage(int i){
-			idLanguage = i; 
+		public void setidLanguage(int i){
+			idLanguage = i;   
 		}
 
 		public String getNameCountry(){
