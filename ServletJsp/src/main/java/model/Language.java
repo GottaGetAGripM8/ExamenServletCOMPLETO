@@ -2,7 +2,7 @@ package model;
 
 public class Language {
 		
-		private int IdLanguage;
+		private int idLanguage;
 		private String NameLang, NameCountry;
 		
 		
@@ -15,11 +15,11 @@ public class Language {
 		}
 		
 		public int getIdLanguage(){
-			return IdLanguage; 
+			return idLanguage; 
 		}
 		
 		public void setIdLanguage(int i){
-			IdLanguage = i;
+			idLanguage = i; 
 		}
 
 		public String getNameCountry(){
